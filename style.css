@@ -251,11 +251,13 @@ th {
 
 .teacher {
     text-align: center;
-    background-color: #ECE6DE;
     border-radius: 15px;
     padding: 20px;
     width: 180px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #ECE6DE, #D8CEC2, #cdc4b9);
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .teacher img {
@@ -273,20 +275,6 @@ th {
 .teacher p {
     font-size: 0.9rem;
     margin: 5px 0;
-}
-footer {
-    background-color: #ECE6DE;
-    color: #000;
-    text-align: center;
-    padding: 15px 20px;
-    bottom: 0;
-    width: 100%;
-    border-radius: 20px 20px 0 0;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1rem;
 }
 
 input, select, textarea {
@@ -328,6 +316,8 @@ input[type="submit"]:hover, button[type="submit"]:hover {
     padding: 40px;
     border-radius: 20px;
     color: rgb(0, 0, 0);
+    margin-bottom: 30px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .test-section h2 {
@@ -352,6 +342,33 @@ input[type="submit"]:hover, button[type="submit"]:hover {
     
     transform: scale(1.05); 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+footer {
+    background-color: #ECE6DE;
+    color: #000;
+    text-align: center;
+    padding: 15px 10px; 
+    bottom: 0;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+    max-width: 90%; 
+}
+
+footer img {
+    max-width: 150px; 
+    height: auto; 
+    margin: 10px 0; 
 }
 
 @media (max-width: 500px) {
