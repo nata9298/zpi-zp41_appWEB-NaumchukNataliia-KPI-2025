@@ -4,52 +4,215 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web</title>
-    <meta charset = "utf-8">
+    <title>English Learning Platform "Engline for IT"</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="menu__wrapper">
-            <a href="#">Особистий кабінет</a>
-            <a href="#">Зареєструватися на сайті</a>
+        <h3>Engline — школа англійської для ІТ фахівців</h3>
+        <div class="contact-info">
+            Телефон: +38 (044) 360-60-30
         </div>
-        <div class="title">Школа англійської мови для ІТ фахівців “Engline”</div>
-        <div class="menu__wrapper">
-            <a href="#">+38(044)360-60-30</a>
-        </div>
+        
     </header>
-    
-    <!-- section__first_screen Start-->
-    <section class="first_screen">
-        <h1>Усі знання в одному місці! Навчайся разом з Engline</h1>
-        <p>Запишись на перший урок і <br>познайомся з нашою школою абсолютно безкоштовно</p>
-        <button>Залишити заявку</button>
-    </section>
-    <!-- section__first_screen End-->
+    <!-- Navigation -->
+    <nav>
+        <a href="#learning-format">Формат навчання</a>
+        <a href="#subscription">Зареєструватися</a>
+        <a href="#test">Пройти тест</a>
+        <a href="#feedback">Залишити відгук</a>
+        <a href="#login" class="login-button">Увійти</a>
+    </nav>
 
-    <img src="/zpi-zp41_appWEB-NaumchukNataliia-КРІ-2025/img_web/Engline.jpg" alt="English_IT" width="224" height="111">
-    <h2>Гід по сайту:</h2>
-    <ol><li>Формат навчання</li>    </ol1>
-    <ol2><li>Ціни</li>    </ol2>
-    <ol3><li>Пройти тест на визначення рівня знання англійської мови</li>    </ol3>
-    <ol4><li>Зареєструватися на сайті</li>    </ol4>
-    <!-- footer Start-->
-    <footer> 
-        <div class="top">
-            <div class="a__wrapper">
-            <a href="#">Ціни</a>
-            <a href="#">Формат навчання</a>
-            <img src="/zpi-zp41_appWEB-NaumchukNataliia-КРІ-2025/img_web/Logo.png" alt="Logo">
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Приєднуйся до школи Engline</h2>
+        <p>Гнучкий формат навчання для всіх рівнів</p>
+        <a href="#learning-format" class="cta-button">Розпочати навчання</a>
+        <div class="img">
+        <img src="/zpi-zp41_appWEB-NaumchukNataliia-КРІ-2025/img_web/Engline_hero_section.png" alt="English_IT">
         </div>
-        </div>
-        <div class="bottom">
-            Зареєструватися на сайті
-        </div>
+    </section>
+
+    <!-- Секція "Увійти в свій обліковий запис" -->
+    <section id="login" class="login-section">
+        <h2>Увійти в свій обліковий запис</h2>
+        <form action="login_process.php" method="POST">
+            <input type="email" name="email" placeholder="Введіть електронну пошту" required>
+            <input type="password" name="password" placeholder="Введіть пароль" required>
+            <button type="submit">Увійти</button>
+        </form>
+    </section>
+
+    <main>
+        <!-- Learning Format and Pricing -->
+        <section id="learning-format" class="section">
+            <img src="/zpi-zp41_appWEB-NaumchukNataliia-КРІ-2025/img_web/eng.png" alt="Формат навчання">
+            <div class="section-content">
+                <h2>Формат навчання та ціни</h2>
+                <p>Виберіть гнучкий формат навчання, який підходить саме вам:</p>
+
+                <h3>Формат навчання </h3>
+    <ol>
+        <li><strong>Індивідуальні заняття</strong>
+            <ul>
+                <li>Персоналізована програма, адаптована до професійної сфери студента.</li>
+                <li>Фокус на технічній англійській: робота з документацією, написання email, підготовка до співбесід.</li>
+            </ul>
+        </li>
+        <li><strong>Онлайн-заняття</strong>
+            <ul>
+                <li>Навчання через Zoom, Google Meet або спеціальні платформи.</li>
+                <li>Використання інтерактивних матеріалів: презентації, дошки Miro, відео.</li>
+                <li>Можливість запису уроків для повторення.</li>
+            </ul>
+        </li>
+        <li><strong>Speaking Club для IT-фахівців</strong>
+            <ul>
+                <li>Тематичні зустрічі для практики розмовної англійської з акцентом на IT.</li>
+                <li>Обговорення актуальних IT-трендів, кейсів, технологій.</li>
+                <li>Можливість спілкування з носіями мови або викладачами з досвідом у IT.</li>
+            </ul>
+        </li>
+        <li><strong>Підготовка до співбесід в IT</strong>
+            <ul>
+                <li>Робота над англомовним резюме та LinkedIn-профілем.</li>
+                <li>Практика відповідей на поширені питання рекрутерів.</li>
+                <li>Моделювання технічних співбесід англійською мовою.</li>
+            </ul>
+        </li>
+    </ol>
+
+                <h3>Ціни:</h3>
+                <table>
+                    <tr>
+                        <th>План</th>
+                        <th>Ціна</th>
+                        <th>Опис</th>
+                    </tr>
+                    <tr>
+                        <td>Місячна</td>
+                        <td>250 грн</td>
+                        <td>Доступ до відео уроків</td>
+                    </tr>
+                    <tr>
+                        <td>Індивідуальні заняття</td>
+                        <td>500 грн/година</td>
+                        <td>Онлайн заняття з викладачем</td>
+                    </tr>
+                    <tr>
+                        <td>Річна</td>
+                        <td>30 500 грн</td>
+                        <td>Необмежений доступ до всіх матеріалів</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <!-- Teachers Section -->
+        <section id="teachers" class="section">
+            <div class="section-content">
+                <h2>Наші викладачі</h2>
+                <p>Ось деякі з наших кваліфікованих викладачів. Оберіть того, хто вам найбільше підходить:</p>
+                <div class="teacher-list">
+                    <div class="teacher">
+                        <img src="/zpi-zp41_appWEB-NaumchukNataliia-КРІ-2025/img_web/Олена.png" alt="Викладач 1">
+                        <h3>Олена</h3>
+                        <p>Досвід: 5 років</p>
+                        <p>Спеціалізація: Open Source English</p>
+                    </div>
+                    <div class="teacher">
+                        <img src="/zpi-zp41_appWEB-NaumchukNataliia-КРІ-2025/img_web/Андрій.png" alt="Викладач 2">
+                        <h3>Андрій</h3>
+                        <p>Досвід: 4 роки</p>
+                        <p>Спеціалізація: Soft Skills</p>
+                    </div>
+                    <div class="teacher">
+                        <img src="/zpi-zp41_appWEB-NaumchukNataliia-КРІ-2025/img_web/Ірина.png" alt="Викладач 3">
+                        <h3>Ірина</h3>
+                        <p>Досвід: 6 років</p>
+                        <p>Спеціалізація: Англійська для Data Science та AI</p>
+                    </div>
+                    <div class="teacher">
+                        <img src="/zpi-zp41_appWEB-NaumchukNataliia-КРІ-2025/img_web/Максим.png" alt="Викладач 4">
+                        <h3>Максим</h3>
+                        <p>Досвід: 10 років</p>
+                        <p>Спеціалізація: IT English для стартапів</p>
+                    </div>
+                    <div class="teacher">
+                        <img src="/zpi-zp41_appWEB-NaumchukNataliia-КРІ-2025/img_web/Софія.png" alt="Викладач 5">
+                        <h3>Софія</h3>
+                        <p>Досвід: 7 років</p>
+                        <p>Спеціалізація: Англійська для тестувальників</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Test Section -->
+        <section id="test" class="test-section">
+            <h2>Пройти тест на визначення рівня англійської</h2>
+            <p>Дізнайтеся ваш рівень англійської мови, пройшовши швидкий тест.</p>
+            <a href="test.html">
+                <button>Розпочати тест</button>
+            </a>
+        </section>
+
+        <!-- Subscription Section -->
+        <section id="subscription" class="section">
+            <img src="/zpi-zp41_appWEB-NaumchukNataliia-КРІ-2025/img_web/register.png" alt="Підписка">
+            <div class="section-content">
+                <h2>Зареєструватися на сайті</h2>
+                <p>Оберіть план та розпочніть навчання:</p>
+                <form>
+                    <label for="email">Електронна пошта:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="plan">План підписки:</label><br>
+                    <select id="plan" name="plan">
+                        <option value="monthly">Місячна</option>
+                        <option value="yearly">Річна</option>
+                    </select><br><br>
+
+                    <label for="teacher">Обрати викладача:</label><br>
+                    <select id="teacher" name="teacher">
+                        <option value="teacher1">Олена</option>
+                        <option value="teacher2">Андрій</option>
+                        <option value="teacher3">Ірина</option>
+                        <option value="teacher4">Максим</option>
+                        <option value="teacher5">Софія</option>
+                    </select><br><br>
+
+                    <label for="time">Зручний час:</label><br>
+                    <input type="time" id="time" name="time"><br><br>
+
+                    <button type="submit">Підписатися</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback" class="section">
+            <img src="/zpi-zp41_appWEB-NaumchukNataliia-КРІ-2025/img_web/rating.png" alt="Відгуки">
+            <div class="section-content">
+                <h2>Залишити відгук</h2>
+                <p>Напишіть ваші враження про навчання:</p>
+                <form>
+                    <label for="review">Ваш відгук:</label><br>
+                    <textarea id="review" name="review" rows="4" cols="50"></textarea><br><br>
+
+                    <button type="submit">Надіслати</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Школа англійської мови Engline</p>
+        <img src="/zpi-zp41_appWEB-NaumchukNataliia-КРІ-2025/img_web/Logo.png" alt="Logo">
     </footer>
-    <!-- footer End-->
 </body>
 </html>

@@ -1,208 +1,365 @@
-body{
-    background-color: antiquewhite;
-    margin: 0px;
+* {
     font-family: "Roboto", serif;
-    font-weight: 100;
+    font-weight: 400;
     font-style: normal;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
 }
 *, *::after, * ::before {
     box-sizing: border-box;
 }
-
-header{
-    width: 100%;
-    height: 76px;
-    background-color: antiquewhite;
-    border-bottom: 1px solid #fdfbf2;
+/* Hero Section */
+.hero {
+    height: 500px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 75px;
-    font-size: 14px;
-    font-weight: bolder;
-}
-
-img {
-    width: 224px;
-    height: 111px;
-    margin-right: 32px;
-    /* margin: 18px auto; */
-}
-
-.menu__wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-
-.menu__wrapper a{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
-    color: #000000;
-    text-decoration: none;
-    display: flex;
-    margin-right: 32px;
-    white-space: nowrap;
-}
-
-/* section__first_screen */
-.section__first_screen {
-    display: flex;
-    flex-flow: column;
-}
-
-section.first_screen h1 {
-    text-align: center;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 50px;
-    color: #000000;
-    text-shadow: -2px 2px 0px #fda858;
-    margin: 0 auto;
-    padding-top: 10px;
-    /*margin-bottom: 10px;
-    padding-right: 200px; */
-}
-
-section.first_screen p {
-    text-align: center;
-    font-weight: 100;
-    font-size: 20px;
-    line-height: 30px;
-    color: #000000;
-    margin: 0 auto;
-    padding-top: 10px;
-    /*margin-bottom: 10px;
-    padding-right: 200px; */
-}
-
-section.first_screen button {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 160px;
-    padding: 20px 20px;
-    background: #6e6b65;
-    border-radius: 15px;
-    margin: 0 auto;
-    color: #FFFFFF;
-    font-family: "Roboto", serif;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 10px;
-    white-space: nowrap;
-    cursor: pointer;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 0 20px;
+    border-radius: 0 0 30px 30px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #FFBD92, #FF916D);
+    color: white;
     border: none;
-    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
 }
 
-/* footer*/
-footer {
-    max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: column;
-    padding-right: 70px;
-    padding-left: 70px;
+.cta-button:hover {
+    background: linear-gradient(135deg, #FF916D, #FF7052, #FF4A3C); 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-footer .top {
+.hero img {
+    margin: 10px 0;
+}
+
+/* Navigation */
+header {
+    background-color: #ECE6DE;
+    color: #000;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
-    padding-bottom: 41px;
-    border-bottom: 1px solid #CCD5DF;
+    align-items: center;
+    top: 0;
+    z-index: 1000;
 }
 
-footer .top a {
-    font-family: "Roboto", serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color:#ECE6DE;
+    padding: 10px 0;
+}
+
+nav a {
     color: #000000;
-    opacity: 0.5;
+    padding: 14px 20px;
     text-decoration: none;
-    margin-right: 24px;
-}
-
-footer .top .a__wrapper a:last-child {
-    margin-right: 0px;
-}
-
-footer .bottom {
-    font-family: "Roboto", serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 20px;
     text-align: center;
-    color: #000000;
-    opacity: 0.5;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
 }
 
-@media (max-width: 1170px) {
-    .sellNFt__img3 {
-        top: 360px;
-    }
+nav a:hover {
+    background: linear-gradient(135deg, #FF916D, #FF7052, #FF4A3C); 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content */
+main {
+    padding: 50px 20px;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.section img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.section-content {
+    flex: 1;
+    padding: 20px;
+    border-left: 2px solid #f3a25e;
+    border-radius: 0 20px 20px 0;
+}
+
+.section-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section-content ul,
+.section-content ol {
+    margin-left: 10px;
+}
+
+.section-content ul li,
+.section-content ol li {
+    padding: 5px 0;
+    font-size: 1.1rem;
+}
+
+.section-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.section-content table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ddd;
+    color: #000;
+}
+
+.section-content button {
+    background-color: ##ff822e;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.section-content button:hover {
+    background: linear-gradient(135deg, #FF916D, #FF7052, #FF4A3C); 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.teacher-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+/* Секція входу */
+.login-section {
+    background-color: #fff;
+    padding: 40px;
+    margin: 30px auto;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.login-section input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.login-section button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #FFBD92, #FF916D);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-section button:hover {
+    background: linear-gradient(135deg, #FF916D, #FF7052, #FF4A3C); 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* Стиль кнопки "Увійти" в навігації */
+.login-button {
+    background: linear-gradient(135deg, #FFBD92, #FF916D);
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.login-button:hover {
+    background: linear-gradient(135deg, #FF916D, #FF7052, #FF4A3C); 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.teacher {
+    text-align: center;
+    background-color: #ECE6DE;
+    border-radius: 15px;
+    padding: 20px;
+    width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.teacher img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.teacher h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.teacher p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+footer {
+    background-color: #ECE6DE;
+    color: #000;
+    text-align: center;
+    padding: 15px 20px;
+    bottom: 0;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+input, select, textarea {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+input[type="email"], input[type="time"] {
+    margin-top: 10px;
+}
+
+input[type="submit"], button[type="submit"] {
+    border-radius: 25px;
+    background: linear-gradient(135deg, #FFBD92, #FF916D);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, button[type="submit"]:hover {
+    background: linear-gradient(135deg, #FF916D, #FF7052, #FF4A3C); 
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Test Section */
+.test-section {
+    text-align: center;
+    background: linear-gradient(135deg, #FFBD92, #FF916D); /* Легкий градієнт */
+    padding: 40px;
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.test-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.test-section button {
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #FF8F44;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.test-section button:hover {
+    background: linear-gradient(135deg, #FF916D, #FF7052, #FF4A3C);
     
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
 }
 
-@media (max-width: 1000px) {
-    header {
-        display: none;
-    }
-
-    .sellNFt__img2 {
-        top: -5px;
-        right: 40px;
-    }
-
-}
-
-@media (max-width: 720px) {
-    .section__sellNFt h1 {
-        font-size: 36px;
-        line-height: 56px;
-    }
-
-    .section__sellNFt p {
-        padding-top: 16px;
-        margin-bottom: 24px;
-    }
-
-    .section__sellNFt p br {
-        display: none;
-    }
-
-    .section__sellNFt {
-        padding: 0px 50px;
-    }
-
-    .sellNFt__img1 {
-        top: 148px;
-        left: -110px;
-    }
-
-    .sellNFt__img2 {
-        right: 2px;
-        top: -5px
-    }
-
-    .sellNFt__img4 {
-        width: 105px;
-        height: auto;
+@media (max-width: 500px) {
+    .hero img {
+        width: 438px;
+        height: 247px;
         right: -50px;
         top: 363px;
-    }
-
-    .sellNFt__img3 {
-        width: 122px;
-        height: auto;
-        left: -44px;
-        top: 398px;
     }
     
 }
