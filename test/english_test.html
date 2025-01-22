@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Knowledge Test by "Engline" School</title>
+    <style>
+        body {
+            font-family: "Roboto", serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffffff, #ed987c);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question p {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #FF916D, #FF7052);
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #FF7052, #FF4A3C);
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e7f5e6;
+            color: #2e7d32;
+            border: 1px solid #2e7d32;
+            border-radius: 10px;
+            display: none;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>English Knowledge Test by "Engline" School</h1>
+        <form id="testForm">
+            <div class="question">
+                <p>1. What is the past tense of "go"?</p>
+                <label><input type="radio" name="q1" value="a"> Goes</label>
+                <label><input type="radio" name="q1" value="b"> Went</label>
+                <label><input type="radio" name="q1" value="c"> Gone</label>
+            </div>
+            <div class="question">
+                <p>2. Which word is a synonym for "happy"?</p>
+                <label><input type="radio" name="q2" value="a"> Sad</label>
+                <label><input type="radio" name="q2" value="b"> Joyful</label>
+                <label><input type="radio" name="q2" value="c"> Angry</label>
+            </div>
+            <div class="question">
+                <p>3. Choose the correct spelling:</p>
+                <label><input type="radio" name="q3" value="a"> Receive</label>
+                <label><input type="radio" name="q3" value="b"> Recieve</label>
+                <label><input type="radio" name="q3" value="c"> Receeve</label>
+            </div>
+            <button type="button" class="btn" onclick="checkAnswers()">Submit</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: 'b',
+                q2: 'b',
+                q3: 'a'
+            };
+
+            let score = 0;
+            const form = document.getElementById('testForm');
+
+            for (const question in answers) {
+                const userAnswer = form[question].value;
+                if (userAnswer === answers[question]) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.textContent = `You scored ${score} out of ${Object.keys(answers).length}`;
+        }
+    </script>
+</body>
+</html>
